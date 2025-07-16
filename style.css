@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --brand-color:#046739;
+    --accent-color:#112F1D;
+    --bg-bar-color:#f5f5f5;
+    --bg-color:#E2E2E4;
+    --text-color:#000;
+}
+
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body, html{
+    font-family: 'Satoshi', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-sec-wrap{
+    width: 100%;
+}
+
+.anc-bar{
+    width: 100%;
+    height: 2.88rem;
+    background-color: var(--bg-bar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anc-text{
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.hero-nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4.5rem;
+    background-color: var(--bg-color);
+}
+
+.hero-nav .logo p{
+    font-size: 1.5rem;
+}
+
+.hero-nav .nav-links ul, a{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+    gap: 2rem;
+}
+
+.hero-nav .nav-links ul li a{
+    font-size: 1rem;
+    font-weight: medium;
+    color: var(--accent-color);
+}
+
+.hero-nav .nav-links ul li a:hover, a:active{
+    border-bottom: 2px solid var(--brand-color);
+
+}
+
+.ham-menu{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+    .hero-nav{
+        padding: 1.5rem 1.5rem;
+    }
+    .hero-nav .nav-links ul{
+        display: none;
+    }
+    .ham-menu{
+        display: block;
+    }
+    
+}
+
+.hero-sec{
+    width: 100%;
+    height: 100svh;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+.container{
+    width: 100%;
+    max-width: 110rem;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container.sec-cotainer{
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+}
+
+.hero-text{
+    z-index: 1;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.hero-text .sub{
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+.hero-text .head{
+    margin-top: 12px;
+    margin-bottom: 24px;
+    font-size: 8rem;
+    font-weight: normal;
+    color: var(--accent-color);
+}
+.hero-text .para{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 100%;
+    color: var(--accent-color);
+    
+}
+
+.btn-wrapper{
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.btn-wrap .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3.25rem;
+    background-color: var(--brand-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-wrap.white, .btn-wrap.white .btn{
+    background-color: #fff;
+    color: #112f1d;
+    border-radius: 0.5rem;
+}
+
+.btn-wrap.white .btn:hover, .btn-wrap .btn:hover{
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.hero-v-image{
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    inset: 0% 0% 0% auto;
+}
+
+.hero-image{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 778px) {
+    .hero-sec{
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+    .hero-text .head{
+        font-size: 4rem;
+    }
+
+
+    .hero-text .sub{
+        font-size: 1.5rem;
+    }
+
+    .hero-image{
+        height: 65%;
+    }
+    .hero-v-image{
+        position: static;
+    }
+    
+}
